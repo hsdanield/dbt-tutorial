@@ -1,0 +1,54 @@
+[0m15:03:42.348954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1cb8049610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1cb82ba300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1cb8170bc0>]}
+
+
+============================== 15:03:42.353474 | aa024a4e-2248-46c6-bbe3-0a4f30d8a080 ==============================
+[0m15:03:42.353474 [info ] [MainThread]: Running with dbt=1.7.9
+[0m15:03:42.354437 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/dhans/Workspaces/self_data/dbt/dbt_postgres_dvdrental', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init jaffle_shop', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:03:42.355863 [info ] [MainThread]: Creating dbt configuration folder at /home/dhans/Workspaces/self_data/dbt/dbt_postgres_dvdrental
+[0m15:03:42.357994 [debug] [MainThread]: Starter project path: /home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m15:03:42.362181 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:03:42.363109 [info ] [MainThread]: Setting up your profile.
+[0m15:03:52.395172 [error] [MainThread]: Encountered an error:
+
+[0m15:03:52.404854 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/dhans/Workspaces/self_data/dbt/.dbt-venv/lib/python3.12/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:03:52.411197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1cb82bafc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1cb8153650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1cb81538f0>]}
+[0m15:03:52.415041 [debug] [MainThread]: Flushing usage events
